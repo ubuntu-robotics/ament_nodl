@@ -25,19 +25,14 @@ set(NODL_EXPORT_NODE_DESCRIPTION_FILE_CMAKE_GUARD TRUE)
 #
 # The relative_filename should be relative to the CMake file that calls this
 # macro.
-# It's relative path to this file will be preserved when being installed.
+#
+# The relative path to this file will be preserved when being installed.
 # For example, if that argument is "nodl/my_desc.xml", then it will be
 # installed to "<prefix>/share/<package>/nodl/my_desc.xml" or if the
 # argument is just "my_desc.xml" it would be installed to
 # "<prefix>/share/<package>/my_desc.xml".
 #
-# This macro should only be called once per package
-#
-# In order to be recognized by NoDL, the file should be exported from the
-# same directory as the CMake file that calls this macro, and should be
-# named "nodl.xml".
-#
-# This function would be used like this:
+# This macro would be used like this:
 #
 #   nodl_export_node_description_file("my_desc.xml")
 #
